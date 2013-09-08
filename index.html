@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Motion Detection Hack</title>
+    <link rel="stylesheet" href="styles/main.css"/>
+</head>
+
+<body>
+    <div id="container" style="width: 640px">
+    <h1>WebRTC Motion Detecting Baby Monitor</h1>
+
+    <div id="dlocal" style="width: 300px;float: left">
+         <h2>Local</h2>
+         <video id="local" autoplay width="300" height="200"></video> 
+    </div>
+
+    <div id="dremote" style="width: 300px;float: right">
+             <h2>Remote</h2>
+            <!--This div required by motion detection-->
+            <div id="dmotion">
+                <video id="remote" autoplay width="300" height="200"></video>
+
+                <!--Canvases for motion detector-->
+                <canvas id="canvas-source" width="300" height="200"></canvas>
+                <canvas id="canvas-highlights" width="300" height="200"></canvas>
+                <canvas id="canvas-blended" width="300" height="200"></canvas>
+
+                <!--required by the motion detector-->
+                <div id="hotSpots">
+                    <div id="target"></div>
+                </div>
+            </div>
+    </div>
+    <div id="controls"></div>
+            <div id="otherClients"> </div>
+            <button id="motionButton" onclick="startMotion()">Start Motion Detection</button>
+    </div>
+
+ </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js">//used in js motion</script>
+    <script src="https://lb1.easyrtc.com/socket.io/socket.io.js">//EasyRTC</script>
+    <script type="text/javascript" src="https://lb1.easyrtc.com/easyrtc/easyrtc.js">//EasyRTC</script>
+    <script src="js/easyRTCapp.js">//My EasyRTC app</script>
+    <script src="js/motion.js">//Modified js motion detection </script>
+    <script src="js/beep.js">//jQueary Motion event with beep </script>
+    <script>
+        //Start the easyRTC connection automatically
+        my_init();
+    </script>
+
+</body>
+</html>
