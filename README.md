@@ -1,19 +1,13 @@
-JS Motion Detection
-===================
+webrtcbabymonitor
+=================
 
-This project tries to provide a basis for other motion-detection apps, by separating the framework and its consumption.
+WebRTC-based baby monitor with motion detection.
 
-The app uses WebRTC, HTML5 Canvas and some math, and is refactored out of the [Magic Xylophone](http://www.soundstep.com/blog/experiments/jsdetection/) by [soundstep](https://github.com/soundstep).
-You can learn more about the process fom Romuald himself [on Adobe Developer Connection](http://www.adobe.com/devnet/html5/articles/javascript-motion-detection.html) and [his blog post](http://www.soundstep.com/blog/2012/03/22/javascript-motion-detection/).
+WebRTC elements utilize on Priologic's EasyRTC Enterprise - https://github.com/priologic/easyrtc
+Motion detection elements based on Really Good's js motion detection - https://github.com/ReallyGood/js-motion-detection 
 
-### Usage
-Any child element you add inside `<div id="hotSpots"></div>` will automagically work as a hotSpot, which means it will fire `motion` events on itself with extra data upon motion detection.
+This is currently a very crude proof-of-concept for demonstration purposes. Call is established using easyRTC and the video stream is redirected to motion.js. Motion.js detects motion by comparing frames in the video stream. If the motion level is very low (currently set to 1 - very sensitive) - a 'motion' event is fired. beep.js plays a beep when it sees this this event.
 
-You could control its appearance & position with CSS, and hook to the `motion` events with jQuery / plain JS.
+Please see webrtchacks.com for details until I get a chance to write more.
 
-#### Sample Usage & DEMO
-
-* See some examples in [sample.js](https://github.com/ReallyGood/js-motion-detection/blob/master/js/sample.js)
-* Open up the demo **[here](http://reallygood.co.il/plugins/motion/)**. Hit Allow, check the console.
-
-_Tested in Chrome Canary, might not yet work in your browser_
+Tested with Chrome  29.0.1547.62 and Firefox 23.0.1.
