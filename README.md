@@ -1,5 +1,5 @@
-webrtcbabymonitor
-=================
+WebRTC Motion Detecting Baby Monitor
+====================================
 
 WebRTC-based baby monitor with motion detection.
 
