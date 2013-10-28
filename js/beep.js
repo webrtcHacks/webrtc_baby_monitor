@@ -8,7 +8,7 @@
          var snd = new Audio("beep-7.mp3"); // buffers automatically when created
          snd.play();
 
-         navigator.notification.vibrate(200);
+         //navigator.notification.vibrate(200);
          console.log("Beep!");
 
          var spot = $(data.spot.el);
