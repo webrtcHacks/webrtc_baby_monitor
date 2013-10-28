@@ -9,6 +9,7 @@
          snd.play();
 
          navigator.notification.vibrate(200);
+         console.log("Beep!");
 
          var spot = $(data.spot.el);
          spot.addClass('active');
