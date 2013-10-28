@@ -30,6 +30,8 @@
     
     //Prevent audio feedback when self-testing
     easyRTC.enableAudio(false);
+    //easyRTC.enableDebug(true);
+    console.log("EasyRTC Initializing.");
     
         easyRTC.initMediaSource(
               function () {      // success callback    
