@@ -24,11 +24,12 @@
     easyRTC.setApiKey("4lbjgglag51i4thm");
     easyRTC.setSocketUrl("https://lb1.easyrtc.com/");
 
-    //easyRTC.enableDebug(true);
+
+    easyRTC.enableDebug(false);
     console.log("EasyRTC Initializing.");
     
     //Prevent audio feedback when self-testing
-    //easyRTC.enableAudio(false);
+    easyRTC.enableAudio(false);
     
         easyRTC.initMediaSource(
               function () {      // success callback    

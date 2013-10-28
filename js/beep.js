@@ -5,8 +5,10 @@
          console.log('detected motion at', new Date(), 'with data:', data);
 
          //Play a beep
-         var snd = new Audio("beep-7.wav"); // buffers automatically when created
+         var snd = new Audio("beep-7.mp3"); // buffers automatically when created
          snd.play();
+
+         navigator.notification.vibrate(200);
 
          var spot = $(data.spot.el);
          spot.addClass('active');
