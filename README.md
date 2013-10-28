@@ -11,5 +11,5 @@ This is currently a very crude proof-of-concept for demonstration purposes. Call
 Please see webrtchacks.com for details until I get a chance to write more.
 
 Tested with Chrome  29.0.1547.62 and Firefox 23.0.1.
-=======
+
 Please see http://webrtchacks.com/baby-motion-detector/ for more details.
